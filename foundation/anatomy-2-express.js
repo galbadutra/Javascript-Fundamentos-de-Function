@@ -3,7 +3,7 @@
     return a + b + c
 })
 
-//Function expression
+//Function expression 
 
 const sum = function (a, b) {
     return a + b
