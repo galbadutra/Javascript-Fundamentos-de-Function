@@ -10,10 +10,39 @@ const students = [
     { name: 'Vanessa', score: 9.1 },
 
 ]
+const elementospares = el => el % 2 === 0
 
-const maioresQueDez = el => el > 10
-const maioresQueCinco = el => el > 10
+const maioresQueOito = el => el.score > 8
+const menoresQueSete = el => el.score < 7
 
-console.log(numbers.filter(el => el > 1))
+console.log(students.filter(el => el.score > 7))
 
 console.log(students.filter(el => el.score > 3))
+
+console.log(students.filter(menoresQueSete))
+
+console.log(numbers.filter(elementospares))
+
+const carrinho = [
+    { nome: 'Sapato', qtd: 10, preco: 100 },
+    { nome: 'Chiclete', qtd: 0, preco: 1.50 },
+    { nome: 'Tesoura', qtd: 10, preco: 12.23 },
+    { nome: 'Caderno', qtd: 10, preco: 20 },
+    { nome: 'Impressora', qtd: 10, preco: 720 },
+]
+
+const qtdMaiorQueZero = carrinho.filter(el => el.qtd > 0)
+
+const produtosValidos = carrinho.filter(el => el.qtd > 0).map(el => el.nome)
+console.log(qtdMaiorQueZero)
+console.log(produtosValidos)
+
+Array.prototype.meuFilter = function (fn) {
+    const arrayNovo = []
+    for (let i = 0; i < this.length; i++) {
+        if (fn(this[i], i, this)) {
+            arraynovo.push(this[i])
+        }
+    }
+    return arrayNovo
+}

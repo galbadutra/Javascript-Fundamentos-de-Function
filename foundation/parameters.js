@@ -5,7 +5,7 @@ function logParams(a, b, c) {
 
 //Tipos de padrões aceitos como passagem em parâmetro
 logParams(1, 2, 3)
-logParams(1, 2)
+logParams(1, 2)   // não passou um valor aparece undefined
 logParams()
 
 //Predeterminação de valor do parâmetro senão for passado nenhum valor quando função for chamada.

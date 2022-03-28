@@ -20,13 +20,23 @@ const students = [
 
 ]
 
-const getscore = el => el.score
+const getscore = el => el.score //função para pegar o  score apenas
 
-//map passando só a função dentro
+//map passando só a função dentro do getscore pegando só as notas
 console.log(students.map(getscore))
 
 //map passando o corpo da função dentro
-console.log(students.map(el => el.score))
 
-//maps concatenados
+//pegando as notas e arredondando elas 
 console.log(students.map(getscore).map(Math.ceil))
+
+Array.prototype.meuMap = function (fn) {
+    const arraynovo = []
+    for (let i = 0; i < this.length; i++) {
+        const result = fn(this[i], i, this)
+        arraynovo.push(result)
+    }
+    return arraynovo
+}
+
+console.log(students.meuMap(el => el.score))

@@ -25,3 +25,6 @@ function returnHiTo(name) {
 }
 
 console.log(returnHiTo("Morreu"))
+
+
+sayHello()

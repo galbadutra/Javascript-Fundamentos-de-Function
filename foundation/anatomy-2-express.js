@@ -11,6 +11,7 @@ const sum = function (a, b) {
 
 const result = sum(7, 59)
 console.log(result)
+console.log(sum(7, 59))
 
 const anothersum = sum
 console.log(anothersum(5, 9))
