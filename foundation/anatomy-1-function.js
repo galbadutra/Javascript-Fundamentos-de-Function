@@ -9,22 +9,25 @@ function sayHelloTo(name) {
     console.log(`Hello ${name}`)
 }
 
-sayHelloTo("javac")
 
 function returnHi() {
     return 'Hi'
 }
 
-const greeting = returnHi()
-console.log(greeting)
-console.log(returnHi())
-
-
 function returnHiTo(name) {
     return `Hi ${name}`
 }
 
-console.log(returnHiTo("Morreu"))
-
 
 sayHello()
+
+sayHelloTo("javac")
+
+
+console.log(returnHi())
+
+const greeting = returnHi()
+
+console.log(greeting)
+
+console.log(returnHiTo("Morreu"))

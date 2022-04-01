@@ -8,8 +8,8 @@ function range_inicial(b) {
 }
 
 function range_intervalo(a, b) {
-    const n1 = b === undefined ? 1 : a
-    const n2 = b === undefined ? a : b
+    const n1 = b === undefined ? 1 : a // se b  não for passado no parametro n1 = 1 , se passou b então n1 = a
+    const n2 = b === undefined ? a : b // se b  não for passado no parametro n2 = a , se passou b entao n2 = b
 
     const nums = []
     for (let x = n1; x <= n2; x++) {
@@ -17,7 +17,7 @@ function range_intervalo(a, b) {
     }
     return nums
 }
-function range_intervalo_soma(a, b, s = 1) {
+function range_intervalo_soma(a, b, s = 1) { // retorna um intervalo , somando de acordo com o valor de s
     const n1 = b === undefined ? 1 : a
     const n2 = b === undefined ? a : b
 
@@ -31,7 +31,7 @@ function range_intervalo_soma(a, b, s = 1) {
 
 
 
-function range(a, b, s = 1) {
+function range(a, b, s = 1) {  // agora intervalo tanto crescente e decrescente
 
     const n1 = b === undefined ? 1 : a // se b for undefined  n1=1 ,senão n1 = a
     const n2 = b === undefined ? a : b // se b for undefined  n2=a , senão n2 = b
@@ -47,9 +47,9 @@ function range(a, b, s = 1) {
     return nums
 
 }
-console.log(range_inicial(5))
-console.log(range_intervalo(2, 7))
-console.log(range_intervalo_soma(10, 19, 2))
-//console.log(range(19, 10))
+//console.log(range_inicial(5))
+//console.log(range_intervalo(2, 7))
+//console.log(range_intervalo_soma(10, 19, 2))
+console.log(range(19, 10))
 //console.log(range(2, 10, 2))
 

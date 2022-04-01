@@ -11,19 +11,19 @@ const increment3 = n => { // não precisa mais do parametro () se passar apenas 
     return n + 1
 }
 
-const increment4 = n => n + 1 // função arrow return de forma implicita , versao enxuta.
+const increment4 = n => n + 1 // função arrow return de forma implicita , versao enxuta pasando entre  () ou mesma linha da arrow =>.
 
 console.log(increment1(0))
 console.log(increment2(1))
 console.log(increment3(2))
 console.log(increment4(3))
 
-// arrow function versão mais curta
+// arrow function versão mais curta, passando mais de uma variavel no parametro precisa ().
 const sum = (a, b) => a + b
 
 console.log(sum(3, 2))
 
-const potencia = (base) => {
+const potencia = (base) => {  //passando 2 função arrow. calcular a potência.
     return (exp) => {
         return Math.pow(base, exp)
     }
